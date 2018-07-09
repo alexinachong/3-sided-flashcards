@@ -1,5 +1,64 @@
+/* CSS RESET */
+html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%
+}
+
+/* STYLE BEGINS BELOW */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.header-text {
+  display: block;
+  background-color: #4257b2;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Phone only */
+@media (max-width:599px) {
+  .header-text {
+    font-size: 1.25em;
+    padding: 10px 17px;
+  }
+}
+
+/* Tablet Portrait only */
+@media (min-width:600px) and (max-width:899px) {
+  .header-text {
+    font-size: 1.5em;
+    padding: 7px 40px;
+  }
+}
+
+/* Tablet Landscape and Up */
+@media (min-width:900px) {
+  .header-text {
+    font-size: 1.5em;
+    padding: 22px 40px;
+  }
 }

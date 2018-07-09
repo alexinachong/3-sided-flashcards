@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { receiveFlashcards, receiveFlashcard } from '../../actions/flashcard_actions';
+import { receiveFlashcards, receiveFlashcard } from '../actions/flashcard_actions';
 import FlashcardList from './flashcard_list';
 
 const mapStateToProps = (state, ownProps) => {

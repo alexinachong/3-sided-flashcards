@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import flashcardsReducer from './flashcardsReducer';
+import flashcardsReducer from './flashcards_reducer';
 
 const rootReducer = combineReducers({
   flashcards: flashcardsReducer
