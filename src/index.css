@@ -26,6 +26,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
+  background-color: #f0f0f0;
 }
 
 h1, h2 {
@@ -37,6 +38,11 @@ h1, h2 {
   background-color: #4257b2;
   color: #ffffff;
   font-weight: 700;
+}
+
+.flashcard-item {
+  background-color: #ffffff;
+  color: #455358;
 }
 
 /* Phone only */
@@ -60,5 +66,22 @@ h1, h2 {
   .header-text {
     font-size: 1.5em;
     padding: 22px 40px;
+  }
+
+  /* Width = 2/3 screen size right of deck details sidebar */
+  .flashcard-item {
+    font-size: 1.75em;
+    height: 428px;
+    width: 67%;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flashcard-item p {
+    border: 1px solid green;
+    margin-left: 38px;
+    margin-right: 38px;
   }
 }
