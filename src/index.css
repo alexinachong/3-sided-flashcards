@@ -40,7 +40,7 @@ h1, h2 {
   font-weight: 700;
 }
 
-.flashcard-item {
+.flashcard-content {
   background-color: #ffffff;
   color: #455358;
 }
@@ -69,7 +69,7 @@ h1, h2 {
   }
 
   /* Width = 2/3 screen size right of deck details sidebar */
-  .flashcard-item {
+  .flashcard-content {
     font-size: 1.75em;
     height: 428px;
     width: 67%;
@@ -79,7 +79,7 @@ h1, h2 {
     justify-content: space-between;
   }
 
-  .flashcard-item p {
+  .flashcard-content p {
     border: 1px solid green;
     margin-left: 38px;
     margin-right: 38px;
