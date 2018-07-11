@@ -8,5 +8,5 @@ export const receiveFlashcard = card => ({
 
 export const receiveFlashcards = cards => ({
   type: RECEIVE_FLASHCARDS,
-  cards: cards 
+  cards: cards
 });
