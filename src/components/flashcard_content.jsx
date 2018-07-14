@@ -4,25 +4,25 @@ const FlashcardContent = ({ flashcard, flashcardId, flashcardSide, flipUp, flipD
   if (flashcardSide === 'definition') {
     return (
       <div className="flashcard-content">
-        <p><button onClick={() => flipUp()} className="flip-buttons">Flip up (pronunciation)</button></p>
+        <button onClick={() => flipUp()} className="flip-buttons">FLIP UP FOR PRONUNCIATION</button>
         <p>{flashcard.definition}</p>
-        <p><button onClick={() => flipDown()} className="flip-buttons">Flip down (phrase)</button></p>
+        <button onClick={() => flipDown()} className="flip-buttons">FLIP DOWN FOR PHRASE</button>
       </div>
     );
   } else if (flashcardSide === 'pronunciation') {
     return (
       <div className="flashcard-content">
-        <p><button onClick={() => flipUp()} className="flip-buttons">Flip up (phrase)</button></p>
+        <button onClick={() => flipUp()} className="flip-buttons">FLIP UP FOR PHRASE</button>
         <p>{flashcard.pronunciation}</p>
-        <p><button onClick={() => flipDown()} className="flip-buttons">Flip down (definition)</button></p>
+        <button onClick={() => flipDown()} className="flip-buttons">FLIP DOWN FOR DEFINITION</button>
       </div>
     );
   } else {
     return (
       <div className="flashcard-content">
-        <p><button onClick={() => flipUp()} className="flip-buttons">Flip up (definition)</button></p>
+        <button onClick={() => flipUp()} className="flip-buttons">FLIP UP FOR DEFINITION</button>
         <p>{flashcard.phrase}</p>
-        <p><button onClick={() => flipDown()} className="flip-buttons">Flip down (pronunciation)</button></p>
+        <button onClick={() => flipDown()} className="flip-buttons">FLIP DOWN FOR PRONUNCIATION</button>
       </div>
     );
   }
