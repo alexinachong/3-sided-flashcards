@@ -23,7 +23,7 @@ class FlashcardPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.flashcardNum < 5) {
+    if (this.state.flashcardNum < 12) {
       this.setState({
         flashcardNum: this.state.flashcardNum + 1
       });
@@ -73,7 +73,7 @@ class FlashcardPage extends React.Component {
         <h2 className="deck-name">Russian Greetings</h2>
         {this.state.flashcardNum}
         <FlashcardContent flashcard={this.props.flashcards[this.state.flashcardNum]} flashcardId={this.state.flashcardNum} flashcardSide={this.state.flashcardSide} flipUp={this.flipUp} flipDown={this.flipDown} />
-        <button onClick={this.handleSubmit} className="next-flashcard-button">Next</button>
+        <button onClick={this.handleSubmit} className="next-flashcard-button">NEXT</button>
       </div>
     );
   }

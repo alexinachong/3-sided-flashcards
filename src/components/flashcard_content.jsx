@@ -13,7 +13,8 @@ const FlashcardContent = ({ flashcard, flashcardId, flashcardSide, flipUp, flipD
     return (
       <div className="flashcard-content">
         <button onClick={() => flipUp()} className="flip-buttons">FLIP UP FOR PHRASE</button>
-        <p>{flashcard.pronunciation}</p>
+        <p>{flashcard.pronunciation_ipa}<br />
+        ({flashcard.pronunciation_respelling})</p>
         <button onClick={() => flipDown()} className="flip-buttons">FLIP DOWN FOR DEFINITION</button>
       </div>
     );
