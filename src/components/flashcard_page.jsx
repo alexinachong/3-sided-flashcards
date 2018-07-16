@@ -23,7 +23,7 @@ class FlashcardPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.flashcardNum < 12) {
+    if (this.state.flashcardNum < 11) {
       this.setState({
         flashcardNum: this.state.flashcardNum + 1
       });
