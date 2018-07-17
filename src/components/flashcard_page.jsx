@@ -12,6 +12,7 @@ class FlashcardPage extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.flipUp = this.flipUp.bind(this);
     this.flipDown = this.flipDown.bind(this);
   }
@@ -27,10 +28,22 @@ class FlashcardPage extends React.Component {
       this.setState({
         flashcardNum: this.state.flashcardNum + 1
       });
-      console.log(this.state.flashcardNum);
     } else {
       this.setState({
         flashcardNum: 1
+      });
+    }
+  }
+
+  goToPreviousCard(e) {
+    e.preventDefault();
+    if (this.state.flashcardNum === 1) {
+      this.setState({
+        flashcardNum: 11
+      });
+    } else {
+      this.setState({
+        flashcardNum: this.state.flashcardNum - 1
       });
     }
   }
@@ -73,7 +86,8 @@ class FlashcardPage extends React.Component {
         <h2 className="deck-name">Russian Greetings</h2>
         {this.state.flashcardNum}
         <FlashcardContent flashcard={this.props.flashcards[this.state.flashcardNum]} flashcardId={this.state.flashcardNum} flashcardSide={this.state.flashcardSide} flipUp={this.flipUp} flipDown={this.flipDown} />
-        <button onClick={this.handleSubmit} className="next-flashcard-button">NEXT</button>
+        <button onClick={this.goToPreviousCard} className="change-flashcard-button">PREVIOUS</button>
+        <button onClick={this.handleSubmit} className="change-flashcard-button">NEXT</button>
       </div>
     );
   }
