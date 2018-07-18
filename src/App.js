@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import FlashcardPageContainer from './components/flashcard_page_container';
+import LeftNav from './components/left_nav';
 
 class App extends Component {
 
@@ -10,7 +11,10 @@ class App extends Component {
     return (
       <div className="container">
         <h1 className="header-text">Three-Sided Flashcards</h1>
-        <FlashcardPageContainer />
+        <div className="main-content-container">
+          <LeftNav />
+          <FlashcardPageContainer />
+        </div>
       </div>
     );
   }

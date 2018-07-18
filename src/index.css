@@ -69,9 +69,23 @@ h1, h2 {
     padding: 10px 40px;
   }
 
+  .main-content-container {
+    display: flex;
+  }
+
   .header-text {
     font-size: 1.5em;
     padding: 22px 40px;
+  }
+
+  .left-nav-container {
+    width: 195px;
+    background-color: #ffffff;
+    box-shadow: 0.3125rem 0 1.25rem 0 rgba(0,0,0,0.28);
+  }
+
+  .flashcard-page {
+    flex-grow: 1;
   }
 
   /* Width = 2/3 screen size right of deck details sidebar */
