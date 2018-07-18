@@ -84,7 +84,7 @@ class FlashcardPage extends React.Component {
     return (
       <div className="flashcard-page">
         <h2 className="deck-name">Russian Greetings</h2>
-        <p>{this.state.flashcardNum} of {Object.keys(this.props.flashcards).length}</p>
+        <p className="flashcard-count"><strong>{this.state.flashcardNum}</strong> of <strong>{Object.keys(this.props.flashcards).length}</strong></p>
         <FlashcardContent flashcard={this.props.flashcards[this.state.flashcardNum]} flashcardId={this.state.flashcardNum} flashcardSide={this.state.flashcardSide} flipUp={this.flipUp} flipDown={this.flipDown} />
         <div className="change-flashcard-buttons-container">
           <button onClick={this.goToPreviousCard} className="change-flashcard-button">PREVIOUS</button>
