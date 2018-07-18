@@ -24,7 +24,7 @@ class FlashcardPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.flashcardNum < 11) {
+    if (this.state.flashcardNum < Object.keys(this.props.flashcards).length) {
       this.setState({
         flashcardNum: this.state.flashcardNum + 1
       });
@@ -39,7 +39,7 @@ class FlashcardPage extends React.Component {
     e.preventDefault();
     if (this.state.flashcardNum === 1) {
       this.setState({
-        flashcardNum: 11
+        flashcardNum: Object.keys(this.props.flashcards).length
       });
     } else {
       this.setState({
@@ -84,10 +84,12 @@ class FlashcardPage extends React.Component {
     return (
       <div className="flashcard-page">
         <h2 className="deck-name">Russian Greetings</h2>
-        {this.state.flashcardNum}
+        <p>{this.state.flashcardNum} of {Object.keys(this.props.flashcards).length}</p>
         <FlashcardContent flashcard={this.props.flashcards[this.state.flashcardNum]} flashcardId={this.state.flashcardNum} flashcardSide={this.state.flashcardSide} flipUp={this.flipUp} flipDown={this.flipDown} />
-        <button onClick={this.goToPreviousCard} className="change-flashcard-button">PREVIOUS</button>
-        <button onClick={this.handleSubmit} className="change-flashcard-button">NEXT</button>
+        <div className="change-flashcard-buttons-container">
+          <button onClick={this.goToPreviousCard} className="change-flashcard-button">PREVIOUS</button>
+          <button onClick={this.handleSubmit} className="change-flashcard-button">NEXT</button>
+        </div>
       </div>
     );
   }
