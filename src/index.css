@@ -66,7 +66,7 @@ h1, h2 {
   h2 {
     font-size: 2.75em;
     color: #455358;
-    padding: 10px 40px;
+    padding: 10px 25px;
   }
 
   .main-content-container {
@@ -79,9 +79,10 @@ h1, h2 {
   }
 
   .left-nav-container {
-    width: 195px;
+    width: 175px;
     background-color: #ffffff;
     box-shadow: 0.3125rem 0 1.25rem 0 rgba(0,0,0,0.28);
+    padding: 10px;
   }
 
   .flashcard-page {
