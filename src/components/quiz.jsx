@@ -11,9 +11,11 @@ class Quiz extends React.Component {
     let allDefinitions = Object.values(this.props.flashcards).map(key => key.definition);
     let definitionOptions = [];
 
+    let optionOne = allDefinitions[Math.floor(Math.random() * allDefinitions.length)];
+
     // select 3 from everything but solution, plus actual solution
     // randomize order of array
-    // map over array to display below word 
+    // map over array to display below word
 
   }
 
