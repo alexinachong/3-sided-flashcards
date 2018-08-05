@@ -22,7 +22,8 @@ class Quiz extends React.Component {
     // return optionOne;
 
     let shuffledOptions = this.shuffleArray(allDefinitions);
-    return shuffledOptions;
+
+    return shuffledOptions.slice(0, 3);
   }
 
   shuffleArray(array) {
