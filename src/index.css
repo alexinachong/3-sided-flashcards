@@ -40,6 +40,10 @@ h1, h2 {
   font-weight: 700;
 }
 
+.main-content-container {
+  display: flex;
+}
+
 .flashcard-content {
   background-color: #ffffff;
   color: #455358;
