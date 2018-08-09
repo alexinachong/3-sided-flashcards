@@ -14,8 +14,10 @@ class App extends Component {
         <h1 className="header-text">Three-Sided Flashcards</h1>
         <div className="main-content-container">
           <LeftNavContainer />
-          <FlashcardPageContainer />
-          <QuizContainer />
+          <div className="right-content-container">
+            <FlashcardPageContainer />
+            <QuizContainer />
+          </div>
         </div>
       </div>
     );
