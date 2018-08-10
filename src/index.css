@@ -55,6 +55,13 @@ h1, h2 {
   color: #455358;
 }
 
+.quiz-option {
+  border: 2px solid blue;
+  border-radius: 3px;
+  padding: 5px 10px;
+  width: 200px;
+}
+
 /* Phone only */
 @media (max-width:599px) {
   .header-text {
