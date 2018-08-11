@@ -46,6 +46,7 @@ class Quiz extends React.Component {
   render() {
     return (
       <div className="quiz-container">
+        <p>Word goes here</p>
         {this.randomizeDefinitionOptions().map(option => (
           <div className="quiz-option">{option}</div>
         ))}
