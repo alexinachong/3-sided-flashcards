@@ -43,12 +43,16 @@ class Quiz extends React.Component {
     return newArray;
   }
 
+  checkWordDefinitionMatch(word, definition) {
+    
+  }
+
   render() {
     return (
       <div className="quiz-container">
         <p>Word goes here</p>
         {this.randomizeDefinitionOptions().map(option => (
-          <div className="quiz-option">{option}</div>
+          <div className="quiz-option"><input type="radio" name="gender" value={option} />{option}</div>
         ))}
       </div>
     );
