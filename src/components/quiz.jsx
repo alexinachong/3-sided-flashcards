@@ -8,6 +8,7 @@ class Quiz extends React.Component {
 
     this.randomizeDefinitionOptions = this.randomizeDefinitionOptions.bind(this);
     this.shuffleArray = this.shuffleArray.bind(this);
+    this.checkWordDefinitionMatch = this.checkWordDefinitionMatch.bind(this);
   }
 
   randomizeDefinitionOptions() {
@@ -32,7 +33,6 @@ class Quiz extends React.Component {
     let randEl = 0;
     let arrLength = array.length;
     while (newArray.length < arrLength) {
-      console.log(arrLength);
       let randElIdx = Math.floor(Math.random() * array.length);
       randEl = array[randElIdx];
       newArray.push(randEl);
@@ -43,8 +43,10 @@ class Quiz extends React.Component {
     return newArray;
   }
 
-  checkWordDefinitionMatch(word, selectedDefinition) {
-    if (word.definition === selectedDefinition) {
+  checkWordDefinitionMatch(e) {
+    e.preventDefault();
+    
+    if (this.props.flashcards["0"]["definition"] === e.target.value) {
       console.log("Correct! :)");
     } else {
       console.log("Incorrect :(");
@@ -56,7 +58,12 @@ class Quiz extends React.Component {
       <div className="quiz-container">
         <p>{this.props.flashcards["0"]["phrase"]}</p>
         {this.randomizeDefinitionOptions().map(option => (
-          <div className="quiz-option"><input type="radio" name="gender" value={option} />{option}</div>
+          <div className="quiz-option">
+            <input type="radio"
+                   name="definition-option"
+                   value={option}
+                   onClick={this.checkWordDefinitionMatch} />{option}
+          </div>
         ))}
       </div>
     );
