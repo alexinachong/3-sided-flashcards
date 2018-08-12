@@ -43,14 +43,18 @@ class Quiz extends React.Component {
     return newArray;
   }
 
-  checkWordDefinitionMatch(word, definition) {
-    
+  checkWordDefinitionMatch(word, selectedDefinition) {
+    if (word.definition === selectedDefinition) {
+      console.log("Correct! :)");
+    } else {
+      console.log("Incorrect :(");
+    }
   }
 
   render() {
     return (
       <div className="quiz-container">
-        <p>Word goes here</p>
+        <p>{this.props.flashcards["0"]["phrase"]}</p>
         {this.randomizeDefinitionOptions().map(option => (
           <div className="quiz-option"><input type="radio" name="gender" value={option} />{option}</div>
         ))}
